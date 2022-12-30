@@ -3,7 +3,7 @@
     "target": "es5",
     "module": "esnext",
     "baseUrl": "./",
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "paths": {
       "@/*": [
         "src/*"
