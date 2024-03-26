@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "vite-ssg": "^0.23.6"
+  }
+}

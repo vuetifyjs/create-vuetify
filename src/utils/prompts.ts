@@ -61,6 +61,7 @@ const promptQuestions = (context: ContextState): PromptObject<string>[] => [
       { title: 'Default (Vuetify)', value: 'default' },
       { title: 'Base (Default, Routing)', value: 'base' },
       { title: 'Essentials (Base, Layouts, Pinia)', value: 'essentials' },
+      { title: 'Recommended (Base, Essentials, SSG)', value: 'recommended' },
     ],
   },
   {
