@@ -12,7 +12,7 @@ import { red } from 'kolorist'
 import minimist from 'minimist'
 import { installDependencies, renderTemplate } from './utils'
 
-const validPresets = ['base', 'custom', 'default', 'essentials']
+const validPresets = ['base', 'custom', 'default', 'essentials', 'recommended']
 
 async function run () {
   const argv = minimist(process.argv.slice(2), {
@@ -70,12 +70,16 @@ async function run () {
 
   renderTemplate(resolve(templatePath, 'default'), projectRoot)
 
-  if (['base', 'essentials'].includes(usePreset)) {
+  if (['base', 'essentials', 'recommended'].includes(usePreset)) {
     renderTemplate(resolve(templatePath, 'base'), projectRoot)
   }
 
   if (['essentials', 'recommended'].includes(usePreset)) {
     renderTemplate(resolve(templatePath, 'essentials'), projectRoot)
+  }
+
+  if (['recommended'].includes(usePreset)) {
+    renderTemplate(resolve(templatePath, 'recommended'), projectRoot)
   }
 
   if (usePackageManager && installDeps) {
